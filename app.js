@@ -72,7 +72,8 @@ const gameShopTypeIdList = [
 ]
 const gameOtherIdList = {
   poe_forever: "ffe3de08e3f84438a9b30bf17cca637f_a9954d9b54c54183a8ab64ee84e6ab7b",
-  poe_s8: "ffe3de08e3f84438a9b30bf17cca637f_211495dd6d5d4df49e1f7bb387329d64"
+  poe_s8: "ffe3de08e3f84438a9b30bf17cca637f_211495dd6d5d4df49e1f7bb387329d64",
+  poe_s9: "ffe3de08e3f84438a9b30bf17cca637f_9f5946a474b24eb9890d8ee8b0217b83",
 }
 
 const ajax = (url, param) => {
@@ -210,16 +211,16 @@ function getDD373forever() {
   })
 }
 
-function getDD373S8() {
-  dealData('poe_s8').then(() => {
-    console.log("S8查询完毕");
+function getDD373S9() {
+  dealData('poe_s9').then(() => {
+    console.log("S9查询完毕");
     mysqlLib.endconnect()
   })
 }
 
 setTimeout(() => {
   scheduleCronstyle('0 0 * * * *', () => {
-    getDD373S8()
+    getDD373S9()
     console.log("整点查询", new Date().toLocaleString());
   })
   scheduleCronstyle('0 30 * * * *', () => {
