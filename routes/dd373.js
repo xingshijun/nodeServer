@@ -17,6 +17,9 @@ router.get('/:area/:stone_name/:startDate/:endDate', function (req, res, next) {
 			case 's8':
 				database = 'poe_s8'
 				break
+			case 's9':
+				database = 'poe_s9'
+				break
 		}
 		mysqlLib.startconnect(database)
 		mysqlLib.selectValues('data', params.stone_name, params.startDate, params.endDate).then((result) => {
