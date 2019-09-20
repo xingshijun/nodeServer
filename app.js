@@ -12,7 +12,7 @@ const carRouter = require('./routes/car');
 var request = require('request');
 var app = express();
 app.all('*', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://45.77.159.13");
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "*");
   res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
   res.header("Content-Type", "application/json;charset=utf-8");
@@ -226,7 +226,7 @@ function getDD373S9() {
   })
 }
 
-setTimeout(() => {
+/*setTimeout(() => {
   scheduleCronstyle('0 0 * * * *', () => {
     getDD373S9()
     console.log("整点查询", new Date().toLocaleString());
@@ -235,5 +235,5 @@ setTimeout(() => {
     getDD373forever()
     console.log("半点查询", new Date().toLocaleString());
   })
-}, 2000)
+}, 2000)*/
 
