@@ -14,33 +14,6 @@ function startconnect(database) {
 	connection.connect();
 }
 
-/*startconnect('poe_forever')
-createTable('data', [
-  {
-    name: 'stone_name',
-    type: "string",
-    num: 10
-  },
-  {
-    name: 'buy_price',
-    type: "number",
-    num: 10
-  },
-  {
-    name: 'sell_price',
-    type: "number",
-    num: 10
-  },
-  {
-    name: 'date',
-    type: "date",
-  },
-  {
-    name: 'time',
-    type: "time",
-  },
-])*/
-
 function endconnect() {
 	connection.end();
 }

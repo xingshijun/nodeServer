@@ -56,14 +56,14 @@ const ajax = (url, param) => {
                 "Accept-Language": "zh-CN,zh;q=0.9",
                 "content-type": "application/x-www-form-urlencoded",
                 "connection": "keep-alive",
-                "cookie": "acw_tc=707c9fc915686011934088110e5a2b37c6227ff44670125206a76ce9cfcacf; _ga=GA1.2.1983768423.1568601192; souid=eSgsNF2BjICZQQdBblGMAg==; last_search_records=eyJpdiI6InJmbEt0endpZ2JPVjJGUEpPZEF2eUE9PSIsInZhbHVlIjoiMWpsSWJvcXBXNVRMcHBYanFOQnlvKzBRQ2FsYUlQUWQwU3hJeW13XC9GcmJHaG5raXhiMlA2SWgySSt4cFZcL0F2IiwibWFjIjoiY2JiZjQxZjM0ZWI4NzkzYWVmMWViZWM2YTY1YmZlOWRmOTQyNjBjYmExOWRlMWRmOWRlOGUyYzVhOGNkMDdiOCJ9; aliyungf_tc=AQAAAHOcTFVY3QAABiSotM8VON+BCQz/; Hm_p1vt_6f69830ae7173059e935b61372431b35=eSgsNF2Bn8WZQQdBblcUAg==; XSRF-TOKEN=eyJpdiI6Ijc4elcwTVRWbUhFeGZLemVUdlRhQkE9PSIsInZhbHVlIjoiOUJKSEpWZXhEYjB2cHZiMU9sMEN3UXkweVRHZElYdnNXdlBPNGhyTEtWczJTVTVnVVBJTjFRckNHSTFEWXFtTld1TXlHSVZ0eGxnZ043XC9UaDBUVzF3PT0iLCJtYWMiOiIyMjE1MjA1YzM0NzBlYmY0ZmY1ZmYyN2VmNjNhMjk2NGJlMTI0N2M5MmJhZTI1NDU4NTYyNTQyMzIyZWFkM2M4In0%3D; _session=eyJpdiI6ImlibGMwUVJaUUxEVHBack83Q1FYdlE9PSIsInZhbHVlIjoiVWR2MU9YRHl6V2t4XC92cko0OFUxWlVWRmRYWkYzMXlvanVNaHo5XC9QdDhKcGQ0VHUzZmdrVCtEOUplWnhxVUdMZk96bFpHakJYRXZSUW5PVjZjMlRxdz09IiwibWFjIjoiY2QxOWUzNTA2NjU3ZDdlNDI0MWFiOGQ1YmM5Y2YxZjUzYjg0YWRjN2Y3N2I1YTBjNWMyZDU5MThiNDVkOWEyOSJ9; SERVERID=4f5f69a3e569b9cd359e6a82e64e12fb|1568776136|1568776133; _gat=1",
+                "cookie": "acw_tc=707c9fc915686011934088110e5a2b37c6227ff44670125206a76ce9cfcacf; _ga=GA1.2.1983768423.1568601192; souid=wKgBHF2IJSRusnPUFKwHAg==; Hm_p1vt_6f69830ae7173059e935b61372431b35=eSgsNF2IJUma6AdFbnyZAg==; _gat=1; last_search_records=eyJpdiI6ImR0XC9lZWNRbWhSWEdKeVAydkoxVDNRPT0iLCJ2YWx1ZSI6ImRXR1BRVk5ybXJVb1RJVVF5YmdMXC9tcXZEU1wvOUZkbjQ1R3pTeVRKWlordz0iLCJtYWMiOiJiNTIwMzdkODgyODI0YWRiMGY2MTRlMDJkYThhMmE1ZWU5ZjVmOWRiYjZlOTkyMWE3ZGI5OTI0OTM5NmUyMWMwIn0%3D; SERVERID=c6de652ace7b1e6134145ef11b72ccf7|1569203542|1569203529; XSRF-TOKEN=eyJpdiI6Ijd1ZkdtMXpoZ3F4Vm9wSzR2UE4zOHc9PSIsInZhbHVlIjoiR1lEQjdsSUhDdDFlN0tDZHR2RHI3TzkySnpWdGJjaHYzR1lXTlBUbk5acXpiTkM0U2dVSEpRWFYza2pKNG93T3lRQ1ZRMEdLbEtkNEpoNUd2T0V5cVE9PSIsIm1hYyI6IjQ0ZDFlYzJhZmE3ZGJiOGQ4YWEzZDEyZjY0NTFkMDdmYzQ4YjJlY2ExYWFkODYzYTQ2ZGQ2OTg3NmM2ZGM4YjIifQ%3D%3D; _session=eyJpdiI6IlwvM1pYNVh1a2hwU2lmRTBtTFwvdjhXZz09IiwidmFsdWUiOiJvcnRzR2JGTjAyeXBlQnQ5V0s1TzdrbWYyV2ZGVVhrbFhiZWlqMXlLUzl4b2o2VGpUMDVxNCtCTUltOXd2OGdmSTZOcW1wdjErd2NlNnd0eElzR3VNUT09IiwibWFjIjoiMzZhY2JhMWNkYTM0YWI4YWM1MGFlMTdiNmNlNWYyOWVkMjQ5OTM3OTdjNmI2YjZiOTVjOGRiOTcwZGJkOTJmNyJ9",
                 "host": "shanghaicity.openservice.kankanews.com",
                 "origin": "https://shanghaicity.openservice.kankanews.com",
                 "Referer": "https://shanghaicity.openservice.kankanews.com/public/bus/mes/sid/" + param.sid,
                 "sec-fetch-dest": "empty",
                 "sec-fetch-site": "same-origin",
                 "sec-fetch-user": "?F",
-                "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1907300 MicroMessenger/7.0.4 Language/zh_CN webview/15687761282831258 webdebugger port/33217",
+                "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1907300 MicroMessenger/7.0.4 Language/zh_CN webview/1569203522381249 webdebugger port/63788",
                 "x-requested-with": "XMLHttpRequest",
             },
             form: param,
@@ -77,7 +77,11 @@ const ajax = (url, param) => {
         });
     })
 }
-
+router.get('/:idnum', function (req, res, next) {
+    var params = req.params
+    getCarSid(params.idnum).then(function (data) {
+        res.send(data);
+    })});
 function getCarSid(name) {
     return new Promise((resolve, reject) => {
         ajax("https://shanghaicity.openservice.kankanews.com/public/bus/get", {
