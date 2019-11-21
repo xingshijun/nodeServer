@@ -52,9 +52,9 @@ router.get('/:car/:direction', function (req, res, next) {
             break
         case "87l" :
             if (params.direction == 0) {// direction 0 上班 1 回家
-                stopid = '17.'
-            } else {
                 stopid = '6.'
+            } else {
+                stopid = '15.'
             }
             sid = '9d82738ff77f4297cec061f5b4d965c1'
             getCar(params.direction + '', stopid, sid).then(function (data) {
