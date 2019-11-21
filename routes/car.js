@@ -114,7 +114,9 @@ router.get('/:idnum', function (req, res, next) {
     var params = req.params
     getCarSid(params.idnum).then(function (data) {
         res.send(data);
-    })});
+    })
+});
+
 function getCarSid(name) {
     return new Promise((resolve, reject) => {
         ajax("https://shanghaicity.openservice.kankanews.com/public/bus/get", {
