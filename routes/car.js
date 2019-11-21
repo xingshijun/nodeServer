@@ -7,7 +7,7 @@ router.get('/:car/:direction', function (req, res, next) {
     var stopid, sid
     switch (params.car) {
         case "ncx" :
-            if (params.direction == 0) {
+            if (params.direction == 0) {// direction 0 上班 1 回家
                 stopid = '5.'
             } else {
                 stopid = '38.'
@@ -18,7 +18,7 @@ router.get('/:car/:direction', function (req, res, next) {
             })
             break
         case "pd28l" :
-            if (params.direction == 0) {
+            if (params.direction == 0) {// direction 0 上班 1 回家
                 stopid = '18.'
             } else {
                 stopid = '19.'
@@ -29,12 +29,45 @@ router.get('/:car/:direction', function (req, res, next) {
             })
             break
         case "pd68l" :
-            if (params.direction == 0) {
+            if (params.direction == 0) {// direction 0 上班 1 回家
                 stopid = '30.'
             } else {
                 stopid = '6.'
             }
             sid = '28a7cafbb30d7e79f93d439dd7696d21'
+            getCar(params.direction + '', stopid, sid).then(function (data) {
+                res.send(data);
+            })
+            break
+        case "sj45l" :
+            if (params.direction == 0) {// direction 0 上班 1 回家
+                stopid = '13.'
+            } else {
+                stopid = '11.'
+            }
+            sid = '522f13b40d7c9d93aba7d0007d4c9be0'
+            getCar(params.direction + '', stopid, sid).then(function (data) {
+                res.send(data);
+            })
+            break
+        case "87l" :
+            if (params.direction == 0) {// direction 0 上班 1 回家
+                stopid = '17.'
+            } else {
+                stopid = '6.'
+            }
+            sid = '9d82738ff77f4297cec061f5b4d965c1'
+            getCar(params.direction + '', stopid, sid).then(function (data) {
+                res.send(data);
+            })
+            break
+        case "qb2l" :
+            if (params.direction == 0) {// direction 0 上班 1 回家
+                stopid = '7.'
+            } else {
+                stopid = '9.'
+            }
+            sid = '1998e03a5b88776756e2fa979d2c2019'
             getCar(params.direction + '', stopid, sid).then(function (data) {
                 res.send(data);
             })
