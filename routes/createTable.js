@@ -6,7 +6,7 @@ function startconnect(database) {
     connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: 'xing1994',
+        password: '123456',
         database: database
         // database: 'poe_s8'
     });
@@ -14,35 +14,32 @@ function startconnect(database) {
     connection.connect();
 }
 
-startconnect('gold')
+startconnect('poe_s12')
+// startconnect('poe_forever')
 createTable('data', [
-    {
-        name: 'user',
-        type: "string",
-        num: 10
-    },
-    {
-        name: 'buy_price',
-        type: "number",
-        num: 10
-    },
-    {
-        name: 'sell_price',
-        type: "number",
-        num: 10
-    },
-    {
-        name: 'switch',
-        type: "number",
-    },
-    {
-        name: 'date',
-        type: "date",
-    },
-    {
-        name: 'time',
-        type: "time",
-    },
+  {
+    name: 'stone_name',
+    type: "string",
+    num: 10
+  },
+  {
+    name: 'buy_price',
+    type: "number",
+    num: 10
+  },
+  {
+    name: 'sell_price',
+    type: "number",
+    num: 10
+  },
+  {
+    name: 'date',
+    type: "date",
+  },
+  {
+    name: 'time',
+    type: "time",
+  },
 ])
 
 function getType(type) {

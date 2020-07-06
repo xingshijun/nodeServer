@@ -6,9 +6,8 @@ function startconnect(database) {
 	connection = mysql.createConnection({
 		host: 'localhost',
 		user: 'root',
-		password: 'xing1994',
+		password: '123456',
 		database: database
-		// database: 'poe_s8'
 	});
 
 	connection.connect();

@@ -5,10 +5,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 var mysqlLib = require('./routes/mysql')
 var schedule = require('node-schedule');
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+// const indexRouter = require('./routes/index');
+// const usersRouter = require('./routes/users');
 const dd373Router = require('./routes/dd373');
-const carRouter = require('./routes/car');
+// const carRouter = require('./routes/car');
 var request = require('request');
 var app = express();
 app.all('*', function(req, res, next) {
@@ -28,10 +28,10 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
 app.use('/dd373', dd373Router);
-app.use('/car', carRouter);
+// app.use('/car', carRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -82,6 +82,8 @@ const gameOtherIdList = {
   poe_forever: "ffe3de08e3f84438a9b30bf17cca637f_a9954d9b54c54183a8ab64ee84e6ab7b",
   poe_s8: "ffe3de08e3f84438a9b30bf17cca637f_211495dd6d5d4df49e1f7bb387329d64",
   poe_s9: "ffe3de08e3f84438a9b30bf17cca637f_9f5946a474b24eb9890d8ee8b0217b83",
+  poe_s11: "ffe3de08e3f84438a9b30bf17cca637f_9a34b06d39b04b80b77e8c6c78bb63c3",
+  poe_s12: "ffe3de08e3f84438a9b30bf17cca637f_41a95160e47c4660995ca8c0dc006b86",
 }
 
 const ajax = (url, param) => {
@@ -219,21 +221,20 @@ function getDD373forever() {
   })
 }
 
-function getDD373S9() {
-  dealData('poe_s9').then(() => {
-    console.log("S9查询完毕");
+function getDD373S11() {
+  dealData('poe_s12').then(() => {
+    console.log("S12查询完毕");
     mysqlLib.endconnect()
   })
 }
-
-/*setTimeout(() => {
+setTimeout(() => {
   scheduleCronstyle('0 0 * * * *', () => {
-    getDD373S9()
+    getDD373S11()
     console.log("整点查询", new Date().toLocaleString());
   })
   scheduleCronstyle('0 30 * * * *', () => {
     getDD373forever()
     console.log("半点查询", new Date().toLocaleString());
   })
-}, 2000)*/
+}, 2000)
 
